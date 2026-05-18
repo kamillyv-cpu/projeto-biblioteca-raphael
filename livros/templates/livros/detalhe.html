@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Detalhes do Livro
+{% endblock %}
+
+{% block content %}
+
+<div class="content-header">
+
+    <div class="breadcrumb">
+        <a href="{% url 'livros:home' %}">Início</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="{% url 'livros:lista' %}">Lista</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Detalhes</span>
+    </div>
+
+</div>
+
+<div class="detail-container">
+
+    <!-- HERO -->
+    <div class="detail-hero">
+
+        <div class="detail-hero-content">
+
+            <h1 class="detail-title">Dom Casmurro</h1>
+
+            <span class="detail-badge">Romance</span>
+
+        </div>
+
+        <div class="detail-hero-actions">
+
+            <button class="btn btn-secondary">✏️ Editar</button>
+
+            <button class="btn btn-danger">🗑️ Excluir</button>
+
+        </div>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="detail-content">
+
+        <div class="detail-section">
+
+            <h3 class="section-title">📋 Informações Principais</h3>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span class="info-label">Título:</span>
+                    <span class="info-value">Dom Casmurro</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">Autor:</span>
+                    <span class="info-value">Machado de Assis</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">Ano:</span>
+                    <span class="info-value">1899</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">Categoria:</span>
+                    <span class="info-value">Romance Clássico</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="detail-section">
+
+            <h3 class="section-title">📝 Descrição</h3>
+
+            <div class="description-box">
+
+                <p>
+                    Dom Casmurro é uma das obras mais importantes da literatura brasileira.
+                    A narrativa acompanha Bentinho e Capitu, explorando temas como ciúmes,
+                    memória e dúvida sobre a fidelidade.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="detail-section">
+
+            <h3 class="section-title">ℹ️ Informações Adicionais</h3>
+
+            <ul class="info-list">
+                <li>📖 Clássico da literatura brasileira</li>
+                <li>🏛️ Autor: Machado de Assis</li>
+                <li>⭐ Muito cobrado em vestibulares</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="detail-footer">
+
+        <a href="{% url 'livros:lista' %}" class="btn btn-outline">
+            ← Voltar para Lista
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

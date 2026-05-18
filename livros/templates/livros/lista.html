@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Lista de Livros
+{% endblock %}
+
+{% block content %}
+
+<div class="content-header">
+
+    <div class="breadcrumb">
+        <a href="{% url 'livros:home' %}">Início</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Lista de Livros</span>
+    </div>
+
+    <h2 class="page-title">Lista de Livros</h2>
+
+</div>
+
+<div class="list-controls">
+
+    <div class="search-box-container">
+        <input type="text" class="search-box" placeholder="🔍 Buscar livros...">
+    </div>
+
+    <button class="btn btn-primary btn-add">
+        ➕ Adicionar Novo
+    </button>
+
+</div>
+
+<div class="items-container">
+
+    <!-- Livro 1 -->
+    <div class="item-card">
+
+        <div class="item-content">
+
+            <div class="item-header">
+                <h3 class="item-title">Dom Casmurro</h3>
+                <span class="item-badge">Romance</span>
+            </div>
+
+            <p class="item-description">
+                Obra clássica de Machado de Assis que aborda ciúmes,
+                memória e relacionamentos.
+            </p>
+
+            <div class="item-meta">
+                <span class="meta-item">📅 1899</span>
+                <span class="meta-item">👤 Machado de Assis</span>
+            </div>
+
+        </div>
+
+        <div class="item-actions">
+
+            <a href="{% url 'livros:detalhe' %}" class="btn-action btn-view">
+                👁️
+            </a>
+
+            <a href="#" class="btn-action btn-edit">
+                ✏️
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Livro 2 -->
+    <div class="item-card">
+
+        <div class="item-content">
+
+            <div class="item-header">
+                <h3 class="item-title">1984</h3>
+                <span class="item-badge">Distopia</span>
+            </div>
+
+            <p class="item-description">
+                Romance distópico que retrata uma sociedade controlada
+                por vigilância extrema.
+            </p>
+
+            <div class="item-meta">
+                <span class="meta-item">📅 1949</span>
+                <span class="meta-item">👤 George Orwell</span>
+            </div>
+
+        </div>
+
+        <div class="item-actions">
+
+            <a href="{% url 'livros:detalhe' %}" class="btn-action btn-view">
+                👁️
+            </a>
+
+            <a href="#" class="btn-action btn-edit">
+                ✏️
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Livro 3 -->
+    <div class="item-card">
+
+        <div class="item-content">
+
+            <div class="item-header">
+                <h3 class="item-title">O Pequeno Príncipe</h3>
+                <span class="item-badge">Fantasia</span>
+            </div>
+
+            <p class="item-description">
+                Livro poético e filosófico sobre amizade, amor e visão do mundo.
+            </p>
+
+            <div class="item-meta">
+                <span class="meta-item">📅 1943</span>
+                <span class="meta-item">👤 Antoine de Saint-Exupéry</span>
+            </div>
+
+        </div>
+
+        <div class="item-actions">
+
+            <a href="{% url 'livros:detalhe' %}" class="btn-action btn-view">
+                👁️
+            </a>
+
+            <a href="#" class="btn-action btn-edit">
+                ✏️
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
